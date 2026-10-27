@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beacon for Gmail</title>
+<meta name="description" content="Beacon is a free, private desktop app for Gmail on Windows. Your important email first, the rest out of the way.">
+<style>
+:root {
+  --bg: #f6f8f7; --panel: #ffffff; --fg: #15201b; --muted: #55635c; --line: #dfe6e2;
+  --accent: #1f9d63; --accent-ink: #ffffff; --soft: #e6f5ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1412; --panel: #161d1a; --fg: #e8eeeb; --muted: #9aa8a1; --line: #26302c; --accent: #3ccf8a; --accent-ink: #062014; --soft: #12261d; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+header.top { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; font-weight: 700; font-size: 20px; }
+.brand svg { width: 34px; height: 34px; }
+nav a { color: var(--muted); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:hover { color: var(--fg); }
+.hero { padding: 48px 0 32px; text-align: center; }
+.hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; margin: 0 0 14px; letter-spacing: -0.02em; }
+.hero p.lead { font-size: 19px; color: var(--muted); max-width: 620px; margin: 0 auto 26px; }
+.btn { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 10px; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); margin-left: 8px; }
+.note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; padding: 24px 0 40px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.privacy-box { background: var(--soft); border-radius: 14px; padding: 22px; margin-bottom: 40px; }
+.privacy-box h2 { margin: 0 0 8px; font-size: 20px; }
+.doc { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 28px clamp(18px, 4vw, 40px); margin: 10px 0 40px; }
+.doc h1 { margin-top: 0; font-size: 30px; line-height: 1.2; }
+.doc h2 { font-size: 19px; margin-top: 28px; }
+.doc .meta { color: var(--muted); font-size: 14px; }
+footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); margin-right: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#1f9d63"/><path d="M8 12.5h18v11H8z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8 12.5 9 6.5 9-6.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="26" cy="9" r="3.4" fill="#c9ffe3"/></svg>
+      Beacon
+    </a>
+    <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://github.com/beaconmailapp">GitHub</a></nav>
+  </header>
+
+  <section class="hero">
+    <h1>The important stuff, first.</h1>
+    <p class="lead">Beacon is a free desktop app for Gmail on Windows. It puts the email that matters in front of you, keeps the rest out of the way, and never sends your mail anywhere but Google.</p>
+    <a class="btn" href="https://github.com/beaconmailapp">Download for Windows</a>
+    <a class="btn ghost" href="https://github.com/beaconmailapp">View the code</a>
+    <p class="note">Beacon is an independent project. It is not made by or affiliated with Google. Gmail is a trademark of Google LLC.</p>
+  </section>
+
+  <section class="grid" aria-label="Features">
+    <div class="card"><h3>For You</h3><p>Learns which email matters to you from who you write to and what you open, star and delete. Teach it with one key.</p></div>
+    <div class="card"><h3>Clean up</h3><p>See your inbox grouped by sender. Archive, delete or unsubscribe from a whole sender in one click.</p></div>
+    <div class="card"><h3>Calendar</h3><p>Day, week and month views of your Google Calendar. Add, edit and answer invites without opening a browser.</p></div>
+    <div class="card"><h3>Built for the desktop</h3><p>Tray icon, Windows alerts for important mail only, dark mode, keyboard shortcuts and several Gmail accounts side by side.</p></div>
+    <div class="card"><h3>Write faster</h3><p>Name suggestions as you type, paste screenshots straight in, drag files to attach, and undo send.</p></div>
+    <div class="card"><h3>Free and open</h3><p>No ads, no account to create, no subscription. The code is public so anyone can see exactly what it does.</p></div>
+  </section>
+
+  <section class="privacy-box">
+    <h2>Your email stays between you and Google</h2>
+    <p>Beacon runs on your computer and talks directly to Google's Gmail and Calendar services. There is no Beacon server. Nothing about your email is collected, stored elsewhere, sold or shared. Read the <a href="privacy.html">privacy policy</a> for the details.</p>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a><a href="https://github.com/beaconmailapp/beaconmailapp.github.io/issues">Contact and support</a>
+    <div style="margin-top:8px">© 2026 Lawrence Rank. Beacon for Gmail is not affiliated with Google LLC.</div>
+  </footer>
+</div>
+</body>
+</html>
